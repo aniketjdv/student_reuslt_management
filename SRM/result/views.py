@@ -56,7 +56,7 @@ def add_teacher(request):
     if form.is_valid():
         form.save()
         return redirect("admin_dashboard")
-    return render(request, "admin/add_teacher.html", {"form": form})
+    return render(request, "result/admin/add_teacher.html", {"form": form})
 
 
 def add_subject(request):
@@ -64,7 +64,7 @@ def add_subject(request):
     if form.is_valid():
         form.save()
         return redirect("admin_dashboard")
-    return render(request, "admin/add_subject.html", {"form": form})
+    return render(request, "result/admin/add_subject.html", {"form": form})
 
 
 def add_marks(request):
@@ -72,4 +72,4 @@ def add_marks(request):
     if form.is_valid():
         form.save()
         return redirect("admin_dashboard")
-    return render(request, "admin/add_marks.html", {"form": form})
+    return render(request, "result/admin/add_marks.html", {"form": form})
