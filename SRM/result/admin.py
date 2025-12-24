@@ -11,10 +11,12 @@ from .models import (
     Exam,
     Marks,
     Result,
-    Attendance
+    Attendance,
+    ChatMessage
 )
 
 admin.site.register(Studentdemo)
+admin.site.register(ChatMessage)
 # -----------------------------
 # Class Admin
 # -----------------------------

@@ -53,7 +53,39 @@
     <a href="{% url 'add_teacher' %}" class="btn btn-secondary">Add Teacher</a>
     <a href="{% url 'add_subject' %}" class="btn btn-success">Add Subject</a>
     <a href="{% url 'add_marks' %}" class="btn btn-dark">Add Marks</a>
+    <a href="{% url 'add_class' %}" class="btn btn-dark">Add Class</a>
 </div>
+
+
+<div class="container mt-4">
+    <h2>Teacher Dashboard</h2>
+
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5>Subject</h5>
+                    <h4>{{ teacher.subject }}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5>Total Marks Entered</h5>
+                    <h4>{{ marks_count }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <a href="{% url 'teacher_add_marks' %}" class="btn btn-success">Add Marks</a>
+    <a href="{% url 'teacher_students' %}" class="btn btn-primary">View Students</a>
+</div>
+
 
 </body>
 </html>

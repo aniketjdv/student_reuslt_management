@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h4>Chat with {{ student.first_name }}</h4>
+
+    <div class="card p-3 mb-3" style="height:300px; overflow-y:auto;">
+        {% for c in chats %}
+            <p>
+                <strong>{{ c.sender }}:</strong> {{ c.message }}
+            </p>
+        {% endfor %}
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="message" class="form-control mb-2" placeholder="Type message">
+        <button class="btn btn-primary">Send</button>
+    </form>
+</div>
+{% endblock content %}
